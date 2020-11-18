@@ -56,7 +56,7 @@ a.active {
 **/
 
 header {
-    background-image: url(/assets/svg/vague.svg);
+    background-image: url(../svg/vague.svg);
     height: 400px;
     background-position: bottom right;
     background-repeat: no-repeat;

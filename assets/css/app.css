@@ -33,7 +33,7 @@ a {
 a.active {
     color: var(--color-orange);
 }
-/* 
+
 ::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);
@@ -49,7 +49,7 @@ a.active {
 ::-webkit-scrollbar-thumb
 {
 	background-color: var(--color-dark);
-} */
+} 
 
 /**
     HEADER

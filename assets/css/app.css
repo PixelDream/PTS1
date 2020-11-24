@@ -501,10 +501,10 @@ footer .elem {
         top: 150px;
     }
     section>img {
-        padding: 0 15vw 0 5vw;
+        padding: 0 0 0 5vw;
     }
     section:nth-child(2n)>img {
-        padding: 0 5vw 0 15vw;
+        padding: 0 5vw 0 0;
     }
     .banner {
         padding: 90px 10vw 30vw 10vw;

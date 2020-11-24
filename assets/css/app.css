@@ -491,6 +491,9 @@ footer .elem {
 }
 
 @media (min-width: 1400px) {
+    h1 {
+        max-width: 720px;
+    }
     main {
         padding: 0 10vw;
         margin-top: -120px;

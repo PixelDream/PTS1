@@ -8,7 +8,9 @@
     --color-orange: #FF9000;
     --font-family: 'Roboto', sans-serif;
 }
-
+* {
+    border-style: groove;
+}
 html, body {
     font-family: var(--font-family);
     box-sizing: border-box;
@@ -57,7 +59,7 @@ a.active {
 
 header {
     background-image: url(../svg/vague.svg);
-    height: 450px;
+    height: 400px;
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,7 +84,7 @@ h1 {
 }
 
 .banner {
-    padding: 90px 5vw 30vw 5vw;
+    padding: 20px 5vw 30vw 5vw;
 }
 
 .banner__text>p {
@@ -371,7 +373,7 @@ section p {
 
 footer {
     background-color: var(--color-dark);
-    padding: 30px 5vw;
+    padding: 5px 5vw;
 }
 
 footer p {
@@ -383,6 +385,7 @@ footer p {
 
 footer img {
     display: none;
+    height: -webkit-fill-available;
 }
 
 footer hr {
@@ -396,6 +399,8 @@ footer .credit {
 
 footer .elem {
     display: flex;
+    justify-content: space-between;
+    height: 110px;
 }
 
 /**
@@ -404,7 +409,7 @@ footer .elem {
 
 @media (min-width: 825px) {
     header {
-        height: 500px;
+        height: 450px;
     }
     main {
         margin-top: -50px;
@@ -425,12 +430,10 @@ footer .elem {
         transition: none;
         width: unset;
         font-size: 1.2em;
-        padding: 20px 5px 0 5px;
+        padding: 10px 5px 0 5px;
     }
     .nav > ul {
         display: flex;
-        margin: 0;
-        padding: 0;
         transform: none;
         -webkit-transform: none;
         -moz-transform: none;
@@ -444,8 +447,11 @@ footer .elem {
         position: absolute;
         left: 5px;
     }
+    .menu__item:first-child > a {
+        display: flex;
+    }
     .menu__item {
-        padding: 0 17px 17px 17px;
+        margin: 0 15px;
         position: relative;
     }
     .menu__sub {
@@ -460,11 +466,6 @@ footer .elem {
     section:nth-child(2n)>img {
         padding: 0 2vw 0 0;
     }
-    .banner__icon > img {
-        position: absolute;
-        width: 400px;
-        top: 120px;
-    }
     footer img {
         display: block;
     }
@@ -472,7 +473,19 @@ footer .elem {
 
 @media (min-width: 992px) {
     header {
-        height: 540px;
+        height: 400px;
+    }
+    .banner__icon>img {
+        width: 200px;
+    }
+    .banner__icon {
+        display: block;
+        align-self: flex-end;
+        border: none;
+    }
+    .banner {
+        display: flex;
+        justify-content: space-between;
     }
     section>img {
         display: block;
@@ -486,17 +499,12 @@ footer .elem {
     section:last-child>img {
         width: 320px;
     }
-    .banner__icon>img {
-        width: 250px;
-        top: 200px;
-        right: 5vw;
-    }
-    .banner__icon {
-        display: block;
-    }
 }
 
 @media (min-width: 1400px) {
+    header {
+        height: 500px;
+    }
     h1 {
         max-width: 720px;
     }
@@ -516,10 +524,13 @@ footer .elem {
         padding: 0 5vw 0 0;
     }
     .banner {
-        padding: 90px 10vw 30vw 10vw;
+        padding: 20px 10vw 30vw 10vw;
     }
     .banner__icon>img {
-        right: 10vw;
+        width: 400px;
+    }
+    .banner__icon {
+        display: block;
     }
     .breadcrumb {
         margin-bottom: 100px;

@@ -8,14 +8,19 @@
     --color-orange: #FF9000;
     --font-family: 'Roboto', sans-serif;
 }
-* {
+/* * {
     border-style: groove;
-}
+} */
 html, body {
     font-family: var(--font-family);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+article > section > img {
+    width: 500px;
+    height: auto;
 }
 
 h1, h2, h3 {
@@ -59,11 +64,14 @@ a.active {
 
 header {
     background-image: url(../images/vague.svg);
-    height: 400px;
+    height: 300px;
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 0;
+}
+header.extended {
+    height: 400px;
 }
 
 h1 {
@@ -373,7 +381,7 @@ section p {
 
 footer {
     background-color: var(--color-dark);
-    padding: 5px 5vw;
+    padding: 6px 5vw;
 }
 
 footer p {
@@ -409,6 +417,9 @@ footer .elem {
 
 @media (min-width: 825px) {
     header {
+        height: 350px;
+    }
+    header.extended {
         height: 450px;
     }
     main {
@@ -455,7 +466,6 @@ footer .elem {
         position: relative;
     }
     .menu__sub {
-        margin-top: 17px;
         position: absolute;
         left: 6px;
         font-size: unset;
@@ -473,6 +483,9 @@ footer .elem {
 
 @media (min-width: 992px) {
     header {
+        height: 300px;
+    }
+    header.extended {
         height: 400px;
     }
     .banner__icon>img {
@@ -503,6 +516,9 @@ footer .elem {
 
 @media (min-width: 1400px) {
     header {
+        height: 400px;
+    }
+    header.extended {
         height: 500px;
     }
     h1 {

@@ -8,9 +8,9 @@
     --color-orange: #FF9000;
     --font-family: 'Roboto', sans-serif;
 }
-* {
+/* * {
     border-style: groove;
-}
+} */
 html, body {
     font-family: var(--font-family);
     box-sizing: border-box;

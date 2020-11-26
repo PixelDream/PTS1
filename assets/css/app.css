@@ -8,19 +8,14 @@
     --color-orange: #FF9000;
     --font-family: 'Roboto', sans-serif;
 }
-/* * {
+* {
     border-style: groove;
-} */
+}
 html, body {
     font-family: var(--font-family);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-article > section > img {
-    width: 500px;
-    height: auto;
 }
 
 h1, h2, h3 {
@@ -31,6 +26,11 @@ h1, h2, h3 {
 
 p {
     font-size: 1.15em;
+}
+
+a.links {
+    color: #0D63B3;
+    text-decoration: underline;
 }
 
 a {
@@ -212,7 +212,7 @@ h1 {
 }
 
 .menu__item {
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 .menu__item>a:hover {
@@ -302,7 +302,19 @@ main {
 }
 
 section {
-    margin-bottom: 50px;
+    margin-bottom: 90px;
+}
+
+article {
+    margin-top: 100px;
+}
+
+article > section > img {
+    width: 320px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    object-position: right;
 }
 
 section>img {

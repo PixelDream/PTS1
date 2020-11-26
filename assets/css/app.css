@@ -327,65 +327,6 @@ section p {
 }
 
 /**
-    CARD
-**/
-
-.card {
-    background-color: #3F3D56;
-    padding: 15px 30px;
-    border: solid var(--color-orange) 3px;
-    border-radius: 15px;
-    margin: 50px 0;
-    position: relative;
-}
-
-.card__tech {
-    position: absolute;
-    top: -45px;
-    right: 20px;
-    list-style: none;
-    display: flex;
-}
-
-.card__tech:hover {
-    cursor: pointer;
-}
-
-.card__tech li {
-    background-color: var(--color-grey);
-    border-radius: 90px;
-    height: 50px;
-    width: 50px;
-    margin-right: 15px;
-    -webkit-border-radius: 90px;
-    -moz-border-radius: 90px;
-    -ms-border-radius: 90px;
-    -o-border-radius: 90px;
-}
-
-.card__tech .active__item {
-    background-color: var(--color-orange);
-}
-
-.card__tech img {
-    height: 50px;
-    width: 50px;
-}
-
-.card__content {
-    margin-top: 40px;
-}
-
-.card__item {
-    color: white;
-    display: none;
-}
-
-.card__active {
-    display: block;
-}
-
-/**
     FOOTER
 **/
 

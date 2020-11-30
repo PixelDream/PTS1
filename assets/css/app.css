@@ -418,7 +418,7 @@ footer .elem {
     }
     .menu__sub {
         position: absolute;
-        left: 6px;
+        left: -108px;
         font-size: unset;
     }
     section>img {

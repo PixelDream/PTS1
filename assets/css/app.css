@@ -338,7 +338,7 @@ footer {
 footer p {
     color: white;
     text-align: justify;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
     max-width: 600px;
 }
 
@@ -359,7 +359,7 @@ footer .credit {
 footer .elem {
     display: flex;
     justify-content: space-between;
-    height: 110px;
+    height: 135px;
 }
 
 /**
@@ -383,7 +383,7 @@ footer .elem {
         display: block;
         position: relative;
         background-color: var(--color-dark);
-        height: 40px;
+        height: 36px;
         margin: 0;
         padding: 0;
         position: unset;

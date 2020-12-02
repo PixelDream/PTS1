@@ -471,7 +471,7 @@ footer .elem {
     }
 
     h1 {
-        max-width: 720px
+        max-width: 750px
     }
 
     main {
@@ -498,6 +498,7 @@ footer .elem {
     }
 
     .banner__icon {
+        margin-top: 90px;
         display: block
     }
 

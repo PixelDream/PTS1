@@ -1,4 +1,16 @@
+/*
+ * PTT - IUT Laval
+ * http://iut-laval.univ-lemans.fr/
+ *
+ * Date: 2021-01-01
+*/
+
+/* Importation de la police */
+
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
+
+/* Création de variables */
+
 :root {
     --color-blue: #107EE6;
     --color-blue-dark: #0D63B3;
@@ -9,27 +21,41 @@
     --font-family: 'Roboto', sans-serif
 }
 
-body,html {
+/* BODY */
+
+body, html {
     font-family: var(--font-family);
     box-sizing: border-box;
     margin: 0;
     padding: 0
 }
 
-h1,h2,h3 {
+/* Titres */
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: 700
+}
+
+h1, h2, h3 {
     color: var(--color-orange);
     text-transform: uppercase
 }
 
-h2,h3 {
+h2, h3 {
     font-weight: 500
 }
+
+/* Paragraphes */
 
 p {
     font-size: 1.15em
 }
 
-.elem a,.sources a,a.links {
+/* Liens */
+
+.elem a, .sources a, a.links {
     color: var(--color-blue-dark);
     text-decoration: underline
 }
@@ -43,12 +69,14 @@ a {
     text-decoration: none
 }
 
-.menu__item>a:hover,.menu__sub a:hover,a.active {
+.menu__item>a:hover, .menu__sub a:hover, a.active {
     color: var(--color-orange)
 }
 
+/* Scroll Bar */
+
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, .3);
     background-color: white
 }
 
@@ -60,6 +88,8 @@ a {
 ::-webkit-scrollbar-thumb {
     background-color: var(--color-dark)
 }
+
+/* header */
 
 header {
     background-image: url(../images/vague.svg);
@@ -74,11 +104,20 @@ header.extended {
     height: 400px
 }
 
-h1 {
-    font-size: 3em;
-    margin: 0;
-    font-weight: 700
+.banner {
+    padding: 20px 5vw 30vw
 }
+
+.banner__text>p {
+    color: white;
+    max-width: 580px
+}
+
+.banner__icon, .menu {
+    display: none
+}
+
+/* Menu de navigation */
 
 .home-icon {
     width: 1em;
@@ -91,22 +130,25 @@ h1 {
     margin: 15px 15px 0 0
 }
 
-.banner {
-    padding: 20px 5vw 30vw
-}
-
-.banner__text>p {
+.nav {
+    transition: left .5s ease;
+    background: var(--color-dark);
     color: white;
-    max-width: 580px
-}
-
-.banner__icon,.menu {
-    display: none
+    cursor: pointer;
+    font-size: 2rem;
+    height: 100vh;
+    right: -24rem;
+    padding: 6rem 2rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 17rem;
+    z-index: 1
 }
 
 .nav-toggle {
     -webkit-user-select: none;
     -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     cursor: pointer;
     height: 2rem;
@@ -122,16 +164,10 @@ h1 {
     opacity: .8
 }
 
-.nav-toggle .nav-toggle-bar,.nav-toggle .nav-toggle-bar::after,.nav-toggle .nav-toggle-bar::before {
+.nav-toggle .nav-toggle-bar, .nav-toggle .nav-toggle-bar::after, .nav-toggle .nav-toggle-bar::before {
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -o-transition: all .5s ease;
     transition: all .5s ease;
     background: white;
     content: '';
@@ -158,63 +194,56 @@ h1 {
     background: 0 0
 }
 
-.nav-toggle.expanded .nav-toggle-bar::after,.nav-toggle.expanded .nav-toggle-bar::before {
+.nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
     background: white;
     margin-top: 0
 }
 
 .nav-toggle.expanded .nav-toggle-bar::after {
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
 }
 
 .nav-toggle.expanded .nav-toggle-bar::before {
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg)
-}
-
-.nav {
-    -webkit-transition: left .5s ease;
-    -moz-transition: left .5s ease;
-    -ms-transition: left .5s ease;
-    -o-transition: left .5s ease;
-    transition: left .5s ease;
-    background: var(--color-dark);
-    color: white;
-    cursor: pointer;
-    font-size: 2rem;
-    height: 100vh;
-    right: -24rem;
-    padding: 6rem 2rem 2rem;
-    position: fixed;
-    top: 0;
-    width: 17rem;
-    z-index: 1
 }
 
 .nav.expanded {
     right: 0
 }
 
-.breadcrumb ul,.nav>ul {
-    list-style: none;
-    margin: 0;
-    padding: 0
-}
-
 .nav>ul {
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%)
 }
 
 .menu__item {
     margin-bottom: 50px
 }
+
+.menu__sub {
+    list-style: none;
+    padding: 15px 10px;
+    margin-top: 0;
+    background-color: var(--color-dark);
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    display: none;
+    border-radius: 0 0 10px 10px;
+    z-index: 3;
+    font-size: .7em
+}
+
+.menu__sub>li {
+    padding: 10px 5px
+}
+
+.menu__item:hover>.menu__sub, .menu__sub:hover {
+    display: block
+}
+
+/* Boutons */
 
 .btn {
     background-color: var(--color-orange);
@@ -231,29 +260,17 @@ h1 {
     color: var(--color-orange)
 }
 
-.menu__sub {
-    list-style: none;
-    padding: 15px 10px;
-    margin-top: 0;
-    background-color: var(--color-dark);
-    width: max-content;
-    display: none;
-    border-radius: 0 0 10px 10px;
-    z-index: 3;
-    font-size: .7em
-}
-
-.menu__sub>li {
-    padding: 10px 5px
-}
-
-.menu__item:hover>.menu__sub,.menu__sub:hover {
-    display: block
-}
+/* Fil d'Ariane*/
 
 .breadcrumb {
     margin-bottom: 50px;
     font-size: .9em
+}
+
+.breadcrumb ul, .nav>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
 }
 
 .breadcrumb ul {
@@ -280,6 +297,8 @@ h1 {
     padding: 0
 }
 
+/* Main, Sections, Articles */
+
 main {
     padding: 0 5vw
 }
@@ -296,7 +315,9 @@ article>section>img {
     width: 320px;
     height: auto;
     display: block;
+    -o-object-fit: contain;
     object-fit: contain;
+    -o-object-position: right;
     object-position: right
 }
 
@@ -310,6 +331,8 @@ section p {
     text-align: justify;
     line-height: 26px
 }
+
+/* FOOTER */
 
 footer {
     background-color: var(--color-dark);
@@ -325,7 +348,9 @@ footer p {
 
 footer img {
     display: none;
-    height: -webkit-fill-available
+    background-color: white;
+    border-radius: 5px;
+    height: 80px;
 }
 
 footer hr {
@@ -340,31 +365,29 @@ footer .credit {
 footer .elem {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 135px
 }
+
+/* Gestion du responsive (Mobile first) */
 
 @media (min-width:825px) {
     header {
         height: 250px
     }
-
     header.extended {
         height: 450px
     }
-
     main {
         margin-top: -50px
     }
-
     .nav-toggle {
         display: none
     }
-
-    .nav,.nav>ul {
+    .nav, .nav>ul {
         top: unset;
         position: unset
     }
-
     .nav {
         display: block;
         position: relative;
@@ -377,7 +400,6 @@ footer .elem {
         font-size: 1.2em;
         padding: 10px 5px 0
     }
-
     .nav>ul {
         display: flex;
         transform: none;
@@ -387,35 +409,28 @@ footer .elem {
         -o-transform: none;
         float: right
     }
-
     .menu__item:first-child {
         position: absolute;
         left: 5px
     }
-
     .menu__item:first-child>a {
         display: flex
     }
-
     .menu__item {
         margin: 0 15px;
         position: relative
     }
-
     .menu__sub {
         position: absolute;
         left: -108px;
         font-size: unset
     }
-
     section>img {
         padding: 0 0 0 2vw
     }
-
     section:nth-child(2n)>img {
         padding: 0 2vw 0 0
     }
-
     footer img {
         display: block
     }
@@ -425,37 +440,29 @@ footer .elem {
     header {
         height: 250px
     }
-
     header.extended {
         height: 400px
     }
-
     .banner__icon>img {
         width: 200px
     }
-
     .banner__icon {
         display: block;
         align-self: flex-end;
         border: 0
     }
-
     .banner {
         justify-content: space-between
     }
-
     section>img {
         display: block
     }
-
-    .banner,section {
+    .banner, section {
         display: flex
     }
-
     section:nth-child(2n) {
         flex-direction: row-reverse
     }
-
     section:last-child>img {
         width: 320px
     }
@@ -465,47 +472,37 @@ footer .elem {
     header {
         height: 320px
     }
-
     header.extended {
         height: 500px
     }
-
     h1 {
         max-width: 750px
     }
-
     main {
         padding: 0 10vw;
         margin-top: -120px
     }
-
     .banner__icon>img {
         right: 10vw;
         top: 150px;
         width: 400px
     }
-
     section>img {
         padding: 0 0 0 5vw
     }
-
     section:nth-child(2n)>img {
         padding: 0 5vw 0 0
     }
-
     .banner {
         padding: 20px 10vw 30vw
     }
-
     .banner__icon {
         margin-top: 90px;
         display: block
     }
-
     .breadcrumb {
         margin-bottom: 100px
     }
-
     footer {
         padding-left: 10vw;
         padding-right: 10vw

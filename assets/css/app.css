@@ -27,7 +27,14 @@ body, html {
     font-family: var(--font-family);
     box-sizing: border-box;
     margin: 0;
-    padding: 0
+    padding: 0;
+    height: 100%
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
 }
 
 /* Titres */
@@ -300,7 +307,8 @@ header.extended {
 /* Main, Sections, Articles */
 
 main {
-    padding: 0 5vw
+    padding: 0 5vw;
+    flex: 1 0 auto
 }
 
 section {
@@ -336,6 +344,7 @@ section p {
 
 footer {
     background-color: var(--color-dark);
+    flex-shrink: 0;
     padding: 6px 5vw
 }
 
